@@ -1,0 +1,50 @@
+:root {
+  --white: #FFFFFF;
+  --black: #231f1e;
+
+  --gray-90: #393534;
+  --gray-70: #656362;
+  --gray-50: #918f8f;
+  --gray-30: #bdbcbc;
+  --gray-20: #d3d2d2;
+  --gray-10: #e9e9e9;
+
+  --red100: #BD0300;
+  --red40: #F56C69;
+
+  // other vars
+  --min-site-width: 360px;
+  --max-site-width: 1590px;
+  --b-radius: 4px;
+
+  // theme vars
+  --accent: #71bf46;
+  --accent-90: #7fc558;
+  --accent-70: #9bd27d;
+  --accent-50: #b8dfa3;
+  --accent-30: #d5ecc8;
+  --accent-20: #f1f9ed;
+
+  --main-text: var(--white);
+  --main-text-inv: var(--gray-30);
+
+  --main-bg: var(--white);
+  --main-bg-inv: var(--gray70);
+
+  --link-hover: var(--red40);
+
+  --btn-text: var(--white);
+  --btn-bg: var(--accent);
+
+  --border: var(--gray50);
+
+  --error: var(--red100);
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$main-font: "Geologica";
+$alt-font: "Open Sans";

@@ -1,0 +1,31 @@
+.site {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-top: var(--offset-top, 0);
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  &__section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-min ($lg) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+}
