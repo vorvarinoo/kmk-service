@@ -14,15 +14,47 @@ const sliderConfig = {
       prevEl: '.products .slider-btn-prev',
     },
     breakpoints: {
-      // when window width is >= 320px
       320: {
         slidesPerView: 'auto',
       },
-      // when window width is >= 480px
       992: {
         slidesPerView: 3,
       },
     }
+  },
+  fuelTypeSlider: {
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 20,
+    autoHeight: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.4,
+      },
+      992: {
+        slidesPerView: 'auto',
+      },
+
+    },
+
+  },
+  reviewsSlider: {
+    loop: true,
+    spaceBetween: 30,
+    freeMode: true,
+    navigation: {
+      nextEl: '.reviews .slider-btn-next',
+      prevEl: '.reviews .slider-btn-prev',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.4,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+
+    },
   },
 };
 
@@ -76,4 +108,3 @@ export {
   observerConfig,
   requestsConfig,
 };
-

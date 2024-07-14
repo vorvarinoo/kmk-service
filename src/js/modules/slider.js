@@ -9,6 +9,8 @@ import {
 const initSliders = () => {
   initSlider( '.main-first', sliderConfig );
   initSlider( '.products-slider', sliderConfig.productsSlider );
+  initSlider( '.fuel-type-slider', sliderConfig.fuelTypeSlider );
+  initSlider( '.reviews-slider', sliderConfig.reviewsSlider );
 };
 
 export {

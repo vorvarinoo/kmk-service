@@ -19,13 +19,29 @@
   }
 
   &__section-top {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    @include media-min ($lg) {
-      align-items: flex-start;
+    @include media-min ($xl) {
       justify-content: flex-start;
+    }
+
+    &--primary {
+      margin-bottom: 20px;
+
+      @include media-min ($lg) {
+        gap: 90px;
+      }
+    }
+
+    &--secondary {
+      align-items: center;
+
+      @include media-min ($xl) {
+        align-items: center;
+      }
     }
   }
 }
