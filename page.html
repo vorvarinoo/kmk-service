@@ -20,51 +20,55 @@
 <body class="indent-reset site">
   <div aria-hidden="true" id="site-top"></div>
   <div class="site__container">
-    <header class="site__header header">
-      <div class="container">
-        <div class="header__content">
-          <div class="header__left">
-            <div class="logo logo--absolute">
-              <img src="img/logo.svg" alt="Logo" width="54px" height="54px">
+    <header class="site__header ">
+
+      <div class="header">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__left">
+              <div class="logo logo--absolute">
+                <img src="img/logo.svg" alt="Logo" width="54px" height="54px">
+              </div>
             </div>
-          </div>
-          <div class="header__right">
-            <nav class="nav nav--lg">
-              <ul class="list-reset nav__list">
+            <div class="header__right">
+              <nav class="nav nav--lg">
+                <ul class="list-reset nav__list">
+                  <li>
+                    <a href="#">Продукция</a>
+                  </li>
+                  <li>
+                    <a href="#">Услуги</a>
+                  </li>
+                  <li>
+                    <a href="#">Проекты</a>
+                  </li>
+                  <li>
+                    <a href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <ul class="list-reset header__list ">
                 <li>
-                  <a href="#">Продукция</a>
-                </li>
-                <li>
-                  <a href="#">Услуги</a>
-                </li>
-                <li>
-                  <a href="#">Проекты</a>
-                </li>
-                <li>
-                  <a href="#">О компании</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
+                  <a class="phone" href="tel:">+7 (800) 500–08–20</a>
                 </li>
               </ul>
-            </nav>
+            </div>
 
-            <ul class="list-reset header__list ">
-              <li>
-                <a class="phone" href="tel:">+7 (800) 500–08–20</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="header__burger d-lg-none align-items-center d-flex">
-            <button class="just-burger btn-reset" aria-label="Меню" id="just-burger" aria-hidden="true">
-              <span class="just-burger__line just-burger__line--top"></span>
-              <span class="just-burger__line just-burger__line--middle"></span>
-              <span class="just-burger__line just-burger__line--bottom"></span>
-            </button>
+            <div class="header__burger d-lg-none align-items-center d-flex">
+              <button class="just-burger btn-reset" aria-label="Меню" id="just-burger" aria-hidden="true">
+                <span class="just-burger__line just-burger__line--top"></span>
+                <span class="just-burger__line just-burger__line--middle"></span>
+                <span class="just-burger__line just-burger__line--bottom"></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="header-modal" aria-hidden="true">
         <div class="header-modal__content">
           <div class="container">
@@ -104,10 +108,17 @@
     <footer class="site__footer footer">
       <div class="container">
         <div class="footer__top">
-          <form class="callback-form" action="">
-            <label class="form-label" for="">Телефон:</label>
-            <input class="form-input" type="tel" placeholder="8 800 000 00 00">
-            <button type="submit">Позвонить</button>
+          <form id="callback-form" class="callback-form" data-validate>
+            <input type="hidden" name="Страница" value="Главная">
+            <input type="hidden" name="Форма" data-subject="" value="Оставить заявку">
+            <label class="form-label" for="phone">Телефон:</label>
+            <input id="phone" name="Контактный телефон" class="form-input" type="tel" required="" placeholder="8 800 000 00 00" data-validate="phone" data-mask="+7 (___) ___ __ __">
+            <button class="btn form-btn" type="submit">
+              Позвонить
+              <svg width="17" height="17" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
+              </svg>
+            </button>
           </form>
           <div class="footer__info">
             <div>
