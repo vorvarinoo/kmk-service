@@ -1392,6 +1392,7 @@ strong {
 .hero {
   position: relative;
 
+  height: 100vh;
   padding-top: 150px;
 }
 @media (min-width: 992px) {
@@ -1419,6 +1420,9 @@ strong {
 .hero__content {
   position: relative;
   z-index: 1;
+
+  display: grid;
+  height: 100%;
 }
 .hero__title {
   margin: 0;
@@ -1430,18 +1434,13 @@ strong {
 }
 @media (min-width: 992px) {
   .hero__title {
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 .hero__bottom {
-  margin-top: 130px;
+  margin-top: auto;
 
   border-top: 1px solid var(--gray-70);
-}
-@media (min-width: 992px) {
-  .hero__bottom {
-    margin-top: 350px;
-  }
 }
 .hero__list {
   display: flex;
