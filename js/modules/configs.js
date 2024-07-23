@@ -26,6 +26,7 @@ const sliderConfig = {
     loop: true,
     spaceBetween: 20,
     autoHeight: true,
+    speed: 1500,
     navigation: {
       nextEl: '.fuel-type .slider-btn-next',
       prevEl: '.fuel-type .slider-btn-prev',
