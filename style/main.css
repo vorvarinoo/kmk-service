@@ -1421,14 +1421,15 @@ strong {
   position: relative;
   z-index: 1;
 
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 .hero__title {
   margin: 0;
   margin-bottom: 50px;
 
-  font-size: 35px;
+  font-size: 30px;
   line-height: 110%;
   color: var(--white);
 }
