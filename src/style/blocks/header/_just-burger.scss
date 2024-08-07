@@ -3,58 +3,47 @@
   --burger-weight: 3px;
   --burger-color: var(--accent);
 
-  position: relative;
-  padding: 0;
-  width: 34px;
-  height: 39px;
-  background-color: transparent;
-  border: none;
+
+  margin: auto;
+  display: grid;
+  place-items: center;
+  height: 16px;
+  width: 60px;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 
-  &__line {
-    position: absolute;
-    right: 0;
-    display: block;
+
+
+  & > span {
     width: 100%;
-    height: var(--burger-weight);
+    height: 2px;
+    display: block;
     background-color: var(--burger-color);
-    border-radius: 99em;
-    transition: all var(--burger-animation-time) ease-in-out;
-
-    &--top {
-      top: 20%;
-      transform-origin: top right;
-    }
-
-    &--middle {
-      width: 75%;
-      top: calc(50% - var(--burger-weight) / 2);
-    }
-
-    &--bottom {
-      bottom: 20%;
-      transform-origin: bottom right;
-    }
+    transition: all 0.3s ease-in-out;
+    justify-self: end;
   }
 
-  &--open {
-    & .just-burger__line {
-      right: 12%;
-    }
+  & > span:nth-child(3) {
+    width: 50%;
+  }
 
-    & .just-burger__line--top {
-      transform: rotate(-45deg) translate(0, -80%);
-    }
+  &:hover > span:nth-child(2) {
+    width: 40px;
+  }
 
-    & .just-burger__line--middle {
-      background-color: transparent;
-      pointer-events: none;
-      transform: translate(-30%, 0);
-    }
+  &.is-expanded span:nth-child(1) {
+    transform-origin: center center;
+    transform: rotate(-45deg) translate(7%, 500%);
+    width: 50%;
+  }
 
-    & .just-burger__line--bottom {
-      transform: rotate(45deg) translate(0, 80%);
-    }
+  &.is-expanded span:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &.is-expanded span:nth-child(3) {
+    transform-origin: center center;
+    transform: rotate(45deg) translate(7%, -500%);
+    width: 50%;
   }
 }

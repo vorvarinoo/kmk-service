@@ -1,0 +1,13 @@
+.categories-modal {
+  background: var(--gray-10);
+
+  & .hystmodal__window {
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  & .hystmodal__close {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%2371BF46' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%2371BF46' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E");
+  }
+}

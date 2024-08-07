@@ -12,10 +12,14 @@
     @include set-font(18px, 1.1, 600);
 
     justify-content: center;
-    padding: var(--btn-offset, var(--btn-offset-vertical, 14px) var(--btn-offset-horizontal, 26px));
+    padding: var(--btn-offset, var(--btn-offset-vertical, 10px) var(--btn-offset-horizontal, 30px));
     color: var(--btn-text);
     background-color: var(--btn-bg);
     border: 1px solid var(--accent);
+
+    @include media-min ($lg) {
+      --btn-offset-vertical: 20px;
+    }
 
     &:hover {
       color: var(--accent);
@@ -26,11 +30,20 @@
   &--secondary {
     @include set-font(16px, 1.1, 600);
 
-    color: var(--gray-30);
+    color: var(--accent);
+
+    @include media-min ($lg) {
+      color: var(--gray-30);
+    }
 
     & svg {
       margin-left: 10px;
       transition: transform .3s ease-in-out;
+      transform: rotate(45deg);
+
+      @include media-min ($lg) {
+        transform: rotate(0);
+      }
     }
 
     &:hover {
@@ -40,5 +53,33 @@
         transform: rotate(45deg);
       }
     }
+  }
+}
+
+.btn-arrow {
+  @include btn-reset;
+
+  --btn-arrow-bg: var(--black);
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--btn-arrow-bg);
+  color: var(--accent);
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &--light {
+    --btn-arrow-bg: var(--white);
+  }
+
+  & svg {
+    transition: .3s;
   }
 }

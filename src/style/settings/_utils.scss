@@ -40,3 +40,11 @@ input[type="checkbox"].visually-hidden {
 .custom-scroll {
   @include custom-scroll;
 }
+
+.custom-cont {
+  padding-left: 15px;
+
+  @include media-min ($lg) {
+    padding-left: 0;
+  }
+}

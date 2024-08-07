@@ -1,6 +1,8 @@
 .hero {
   position: relative;
   padding-top: 150px;
+  height: 100vh;
+
 
   @include media-min ($lg) {
     padding-top: 200px;
@@ -25,27 +27,26 @@
   &__content {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   &__title {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 110%;
     color: var(--white);
     margin: 0;
     margin-bottom: 50px;
 
     @include media-min ($lg) {
-      font-size: 80px;
+      font-size: 60px;
     }
   }
 
   &__bottom {
     border-top: 1px solid var(--gray-70);
-    margin-top: 130px;
-
-    @include media-min ($lg) {
-      margin-top: 350px;
-    }
+    margin-top: auto;
   }
 
   &__list {

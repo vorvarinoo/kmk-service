@@ -3,6 +3,10 @@ import {
 } from './modules/utils.js';
 
 import {
+  initHeaderMenu
+} from './modules/header.js';
+
+import {
   validateForms,
 } from './modules/validate.js';
 
@@ -20,6 +24,10 @@ import {
 
 import './modules/accordion.js';
 
+import {
+  initYTubeVideo
+} from './modules/yt-video.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
 
@@ -28,5 +36,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initModals();
     initSliders();
     initScrollTop();
+    initYTubeVideo();
+    initHeaderMenu();
   } );
 } );

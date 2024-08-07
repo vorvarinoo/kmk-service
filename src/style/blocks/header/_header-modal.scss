@@ -12,7 +12,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 
     & .header-modal__content {
-      @include anim(fade, .3s);
+      @include anim(fade-left, .3s);
 
       display: block;
     }
@@ -28,7 +28,7 @@
     display: none;
     width: 100%;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--black);
     overflow: auto;
     padding-top: 75px;
     padding-bottom: 50px;

@@ -1,0 +1,41 @@
+.logo {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+
+  @include media-min ($lg) {
+    width: 90px;
+    height: 90px;
+
+    & img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  & img {
+    transition: transform .3s ease-in-out;
+  }
+
+  &--absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+
+}
+
+@media (any-hover: hover) {
+  .logo:hover {
+    & img {
+      transform-origin: center;
+      transform: scale(1.1);
+    }
+  }
+}

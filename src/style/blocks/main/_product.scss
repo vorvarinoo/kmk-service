@@ -1,17 +1,51 @@
 .product {
-  box-sizing: border-box;
   position: relative;
-  max-width: 250px;
-  width: 100%;
-  padding: 0 0 20px 10px;
-  transition: .3s;
 
-  @include media-min ($lg) {
-    max-width: 350px;
+  &--large {
+    --border-tr: var(--gray-20);
+
+    display: flex;
+    background-color: var(--gray-10);
+    padding: 15px;
+    column-gap: 50px;
+
+    & .product__title {
+      margin-bottom: 20px;
+    }
+
+    & .product__img {
+      max-width: 150px;
+      height: 150px;
+
+      @include media-min ($lg) {
+        max-width: 180px;
+        height: 180px;
+      }
+    }
+
+    & .product__btn {
+      display: none;
+
+      @include media-min ($lg) {
+        display: flex;
+      }
+    }
   }
 
-  &:hover {
+  &--small {
+    --border-tr: var(--gray-10);
+
+    box-sizing: border-box;
+    max-width: 250px;
+    width: 100%;
+    padding: 0 0 20px 10px;
+    transition: .3s;
     background-color: #000000;
+
+    @include media-min ($lg) {
+      max-width: 350px;
+      background-color: transparent;
+    }
 
     &::after {
       position: absolute;
@@ -21,62 +55,126 @@
       bottom: 0;
       right: 0;
       background-image: url('../img/sprite.svg#icon-dot-green');
-      background-size: 20px;
+      background-size: 15px;
       background-repeat: repeat;
       opacity: .2;
+
+      @include media-min ($lg) {
+        content: none;
+      }
+    }
+
+
+    &:hover {
+      background-color: #000000;
+
+      &::after {
+        content: '';
+      }
+
+      & .product__power {
+        color: var(--white);
+      }
+
+      & .product__btn {
+        color: var(--accent);
+        background-color: var(--white);
+
+        & svg {
+          transform: rotate(45deg);
+        }
+      }
+
+      & .product__title > a {
+        color: var(--accent);
+      }
+    }
+
+    & .product__top {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+
+      @include media-min ($xl) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
 
     & .product__power {
+      display: block;
+      margin-top: 5px;
       color: var(--white);
+      margin-bottom: 10px;
+      transition: .3s;
+
+      @include media-min ($lg) {
+        color: var(--gray-30);
+      }
+
+      @include media-min ($xl) {
+        margin-bottom: 0;
+      }
     }
 
-    & .product__btn {
-      color: var(--accent);
-      background-color: var(--white);
+    & .product__img {
+      max-width: 240px;
+      width: 100%;
+      height: 240px;
+      flex-shrink: 0;
+      margin-left: auto;
+
+      @include media-min ($lg) {
+        max-width: 250px;
+        height: 250px;
+      }
+
+      // &::after {
+      //   position: absolute;
+      //   content: '';
+      //   top: 0;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+      // }
     }
 
     & .product__title {
+      & > a {
+        transition: .3s;
+
+        @include media-min ($lg) {
+          color: var(--black);
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    & > a {
+      font-size: 18px;
+      line-height: 1.1;
       color: var(--accent);
-    }
-  }
 
-  &__top {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 20px;
-
-    @include media-min ($xl) {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  }
-
-  &__power {
-    display: block;
-    margin-top: 5px;
-    color: var(--gray-30);
-    margin-bottom: 10px;
-    transition: .3s;
-
-    @include media-min ($xl) {
-      margin-bottom: 0;
+      &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
     }
   }
 
   &__img {
     position: relative;
-    max-width: 240px;
-    width: 100%;
-    height: 240px;
-    flex-shrink: 0;
-    margin-left: auto;
-
-    @include media-min ($lg) {
-      max-width: 250px;
-      height: 250px;
-    }
   }
 
   &__btn {
@@ -87,35 +185,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--white);
     width: 50px;
     height: 50px;
     transition: .3s;
+    border: none;
+
+    @include media-min ($lg) {
+      background-color: var(--black);
+    }
 
     & svg {
       transition: .3s;
     }
-
-    &:hover {
-      & svg {
-        transform: rotate(45deg);
-      }
-    }
   }
 
-  &__bottom {
-    position: relative;
-    z-index: 1;
-    margin-right: 10px;
-  }
-
-  &__title {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 110%;
-    color: var(--black);
-    transition: .3s;
-  }
 
   &__feature {
     display: none;
@@ -123,7 +207,7 @@
     width: 100%;
 
     & tr {
-      border-top: 1px solid var(--gray-10);
+      border-top: 1px solid var(--border-tr);
       display: flex;
       justify-content: space-between;
       padding-bottom: 10px;
@@ -148,6 +232,7 @@
   }
 
   &__feature-value {
+    font-weight: 600;
     text-align: right;
   }
 }

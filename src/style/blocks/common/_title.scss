@@ -1,6 +1,12 @@
 .title {
   margin: 0;
   line-height: 110%;
+  font-size: 35px;
+
+
+  @include media-min ($lg) {
+    font-size: 80px;
+  }
 
   &--primary {
     font-size: 30px;
@@ -12,5 +18,15 @@
     }
   }
 
-  &--secondary {}
+  &--secondary {
+    font-size: 25px;
+
+    @include media-min ($lg) {
+      font-size: 40px;
+    }
+  }
+
+  &--page {
+    color: var(--gray-10);
+  }
 }

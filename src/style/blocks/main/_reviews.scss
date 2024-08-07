@@ -26,6 +26,7 @@
     margin-top: 50px;
 
     @include media-min ($lg) {
+      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       gap: 75px;

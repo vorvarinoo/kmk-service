@@ -1,2 +1,41 @@
-<header class="site__header">
+<header class="site__header ">
+
+  <div class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__left">
+          <a href="#"
+             class="logo logo--absolute">
+            <img src="img/logo.svg"
+                 alt="Logo"
+                 width="54px"
+                 height="54px">
+          </a>
+        </div>
+        <div class="header__right">
+          @include('nav.html', {class:'nav--lg'})
+
+          <ul class="list-reset header__list ">
+            <li>
+              <a class="phone"
+                 href="tel:">+7 (800) 500–08–20</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__burger d-lg-none align-items-center d-flex">
+          <button class="just-burger btn-reset"
+                  aria-label="Меню"
+                  id="just-burger"
+                  aria-hidden="true">
+            <span class="just-burger__line just-burger__line--top"></span>
+            <span class="just-burger__line just-burger__line--middle"></span>
+            <span class="just-burger__line just-burger__line--bottom"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @include('modal.html')
 </header>

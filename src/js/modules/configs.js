@@ -4,7 +4,6 @@ const sliderConfig = {
     spaceBetween: 30,
     watchSlidesProgress: true,
   },
-
   productsSlider: {
     spaceBetween: 30,
     watchSlidesProgress: true,
@@ -27,14 +26,31 @@ const sliderConfig = {
     loop: true,
     spaceBetween: 20,
     autoHeight: true,
+    speed: 1500,
+    navigation: {
+      nextEl: '.fuel-type .slider-btn-next',
+      prevEl: '.fuel-type .slider-btn-prev',
+    },
     breakpoints: {
-      320: {
-        slidesPerView: 1.4,
+      300: {
+        slidesPerView: 1.7,
       },
       992: {
-        slidesPerView: 'auto',
+        slidesPerView: 5,
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+          scale: 0.9,
+        },
       },
-
+      1200: {
+        slidesPerView: 7,
+        spaceBetween: 50,
+      },
     },
 
   },
@@ -53,7 +69,34 @@ const sliderConfig = {
       992: {
         slidesPerView: 2,
       },
-
+    },
+  },
+  projectsSlider: {
+    loop: true,
+    navigation: {
+      nextEl: '.projects .slider-btn-next',
+      prevEl: '.projects .slider-btn-prev',
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 30,
+        slidesPerView: 1.4,
+        freeMode: true,
+      },
+      992: {
+        spaceBetween: 0,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+          scale: 0.8,
+        },
+      },
     },
   },
 };

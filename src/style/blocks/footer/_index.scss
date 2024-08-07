@@ -1,0 +1,139 @@
+.footer {
+  background-color: var(--black);
+  padding: 30px 0 50px;
+
+  &__top {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-min ($lg) {
+      padding-right: 40px;
+    }
+  }
+
+
+
+  & #callback-form {
+    display: grid;
+    margin-right: auto;
+    grid-auto-rows: min-content;
+    margin-bottom: 30px;
+
+    @include media-min ($lg) {
+      max-width: 333px;
+      margin-bottom: 0;
+    }
+
+    & .form-label {
+      font-size: 16px;
+      color: var(--gray-50);
+      margin-bottom: 10px;
+    }
+
+    & .form-input {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 1.1;
+      color: var(--accent);
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-bottom: 20px;
+
+      @include media-min ($lg) {
+        margin-bottom: 30px;
+        font-size: 40px;
+      }
+    }
+
+    & .form-input:focus-visible {
+      box-shadow: none;
+    }
+
+    & .form-btn {
+      border-top: 1px solid var(--accent);
+      padding-top: 10px;
+      font-size: 16px;
+      color: var(--gray-30);
+      display: flex;
+      justify-content: space-between;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+      }
+
+      & svg {
+        transition: transform .3s ease-in-out;
+      }
+
+      &:hover {
+        color: var(--accent);
+
+        & svg {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: grid;
+    border-left: 1px solid var(--gray-70);
+    padding-left: 15px;
+
+    @include media-min ($lg) {
+      padding-left: 30px;
+    }
+
+    & > div {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    color: var(--gray-50);
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.1;
+    color: var(--whhite);
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--gray-70);
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-min ($lg) {}
+  }
+
+  &__copyright,
+  &__policy,
+  &__development {
+    color: var(--gray-50);
+
+    & a {
+      color: inherit;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+
+}
+
+.address {}
+
+.working-hours {}

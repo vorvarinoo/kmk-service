@@ -11,6 +11,7 @@ const initSliders = () => {
   initSlider( '.products-slider', sliderConfig.productsSlider );
   initSlider( '.fuel-type-slider', sliderConfig.fuelTypeSlider );
   initSlider( '.reviews-slider', sliderConfig.reviewsSlider );
+  initSlider( '.projects-slider', sliderConfig.projectsSlider );
 };
 
 export {

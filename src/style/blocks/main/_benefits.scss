@@ -31,6 +31,7 @@
 
     @include media-min ($lg) {
       display: grid;
+      overflow-x: auto;
     }
 
     & > li {

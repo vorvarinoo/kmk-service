@@ -1,0 +1,71 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: var(--black);
+  border-bottom: 5px solid var(--white);
+
+  &.is-sticky {
+    position: fixed;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    position: relative;
+    width: 80px;
+    display: flex;
+    flex-shrink: 0;
+
+    @include media-min ($lg) {
+      width: 90px;
+      margin-right: 2rem;
+    }
+  }
+
+  &__right {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-min ($lg) {
+      margin-left: auto;
+      max-width: 950px;
+      width: 100%;
+      gap: 2.5rem;
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+
+    @include media-min ($md) {
+      flex-direction: row;
+    }
+
+    @include media-min ($lg) {
+      flex-shrink: 0;
+      gap: 2rem;
+    }
+
+    & a {
+      color: var(--accent);
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+}

@@ -1,6 +1,77 @@
 .about {
+  padding: 50px 0;
+
+  @include media-min ($lg) {
+    padding: 20px 0 100px;
+  }
+
+  &__video {
+    position: relative;
+    cursor: pointer;
+    height: 300px;
+
+
+    @include media-min ($lg) {}
+
+    @include media-min ($lg) {
+      height: 550px;
+      position: relative;
+      bottom: -80px;
+    }
+
+    &::before {
+      --background: rgba(255, 255, 255, 0.8);
+
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-image: fill 0 linear-gradient(var(--background), var(--background));
+    }
+
+    &:hover {
+      & svg {
+        color: var(--white);
+        transform: scale(1.3);
+      }
+    }
+
+    & img {
+      height: 100%;
+    }
+
+  }
+
+  &__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+    pointer-events: none;
+    border-radius: 100%;
+
+    & svg {
+      transform-origin: center;
+      color: var(--accent-50);
+      margin-left: 10px;
+      transition: color .3s ease-in-out, transform .3s ease-in-out;
+    }
+  }
+
 
   &__bottom {
+    position: relative;
+    z-index: 1;
+
     @include media-min ($lg) {
       display: flex;
       flex-direction: row-reverse;
@@ -12,6 +83,11 @@
     display: flex;
     padding: 20px 0;
     margin-bottom: 10px;
+    overflow-x: scroll;
+
+    @include media-min ($md) {
+      overflow-x: auto;
+    }
 
     @include media-min ($lg) {
       padding: 30px 0;
@@ -25,10 +101,11 @@
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    min-width: 200px;
 
     @include media-min ($md) {
       flex-grow: 1;
+      min-width: auto;
       width: 100%;
     }
 
@@ -94,6 +171,7 @@
 
   &__descr {
     width: 100%;
+    background-color: var(--white);
 
     @include media-min ($lg) {
       max-width: 540px;
