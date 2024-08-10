@@ -1,0 +1,22 @@
+.page-projects {
+
+  &__cont {
+    background-color: var(--white);
+    padding: 50px 0 100px;
+
+    @include media-min ($lg) {
+      padding: 100px 0 120px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+
+    @include media-min ($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 30px;
+    }
+  }
+}

@@ -28,6 +28,10 @@ import {
   initYTubeVideo
 } from './modules/yt-video.js';
 
+import {
+  initModalCategories
+} from './modules/products.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
 
@@ -38,5 +42,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initScrollTop();
     initYTubeVideo();
     initHeaderMenu();
+    initModalCategories();
   } );
 } );

@@ -74,8 +74,8 @@ const sliderConfig = {
   projectsSlider: {
     loop: true,
     navigation: {
-      nextEl: '.projects .slider-btn-next',
-      prevEl: '.projects .slider-btn-prev',
+      nextEl: '.projects-slider .slider-btn-next',
+      prevEl: '.projects-slider .slider-btn-prev',
     },
     breakpoints: {
       320: {

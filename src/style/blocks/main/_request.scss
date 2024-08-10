@@ -5,9 +5,53 @@
     padding: 100px 0;
   }
 
-  &--black {
+  &--large {
+
+    & .request__descr {
+      position: relative;
+      z-index: 1;
+
+      @include media-min ($lg) {
+        padding-right: 35%;
+      }
+    }
+
+    & .request__text {
+      margin-bottom: 50px;
+      max-width: 300px;
+
+      @include media-min ($lg) {
+        font-size: 20px;
+        margin-bottom: 110px;
+      }
+    }
+
+  }
+
+  &--small {
     background-color: var(--black);
 
+    & .request__inner {
+      border: solid 1px var(--accent);
+      padding: 20px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 50px;
+
+
+      @include media-min ($lg) {
+        padding: 50px;
+        flex-direction: row;
+        align-items: center;
+      }
+
+    }
+
+    & .request__text {
+      max-width: 500px;
+    }
   }
 
   &__inner {
@@ -29,38 +73,9 @@
       background-image: url("../img/sprite.svg#icon-dot-white");
       background-size: 20px;
       background-repeat: repeat;
-      opacity: 0.15;
+      opacity: 0.10;
     }
 
-    &--border {
-      border: solid 1px var(--accent);
-      padding: 20px;
-      background-color: transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-
-      @include media-min ($lg) {
-        padding: 50px;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      & .request__descr {
-        padding-right: 40px;
-      }
-
-      & .request__text {
-        margin: 0;
-        margin-bottom: 50px;
-
-        @include media-min ($lg) {
-          margin-bottom: 0;
-        }
-      }
-
-    }
   }
 
   &__content {
@@ -96,15 +111,6 @@
     }
   }
 
-  &__descr {
-    position: relative;
-    z-index: 1;
-
-    @include media-min ($lg) {
-      padding-right: 35%;
-    }
-  }
-
   &__title {
     font-size: 25px;
     line-height: 1.1;
@@ -123,15 +129,9 @@
 
   &__text {
     margin: 0;
-    margin-bottom: 50px;
     font-size: 18px;
-    line-height: 110%;
-    color: var(--gray-30);
-    max-width: 300px;
-
-    @include media-min ($lg) {
-      font-size: 20px;
-      margin-bottom: 110px;
-    }
+    line-height: 1.1;
+    color: var(--white);
+    opacity: 0.5;
   }
 }

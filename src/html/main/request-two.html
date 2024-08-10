@@ -1,12 +1,12 @@
-<section class="request request--black">
+<section class="request request--small @if(context.class) {@class}">
   <div class="container">
-    <div class="request__inner request__inner--border">
+    <div class="request__inner">
       <div class="request__descr">
         <h2 class="title request__title">
           Остались вопросы
         </h2>
         <p class="request__text">
-          Позвоните нам или оставьте заявку - наши менеджеры проконсультируют вас
+          @if(context.text) {@text}
         </p>
       </div>
       <button class="btn btn--primary">Оставить заявку</button>

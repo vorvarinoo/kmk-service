@@ -1,8 +1,8 @@
-<section class="products">
+<section class="products @if(context.class) {@class}">
   <div class="container">
     <div class="site__section-top site__section-top--primary">
       <div class="products__info">
-        <h2 class="title title--primary mr-lg-4">Продукция</h2>
+        <h2 class="title title--primary mr-lg-4">@if(context.title) {@title}</h2>
         <a class="btn btn--secondary"
            href="#">
           В каталог

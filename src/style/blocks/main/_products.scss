@@ -5,6 +5,22 @@
     padding-top: 100px;
   }
 
+  &--page-product {
+    background-color: var(--white);
+
+    & .products__info {
+      @include media-max ($lg) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        & .title {
+          margin-bottom: 10px;
+        }
+
+      }
+    }
+  }
+
   &__top {
     display: flex;
     gap: 90px;
