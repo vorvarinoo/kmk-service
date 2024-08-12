@@ -14,7 +14,7 @@
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style/vendor-bundle.css">
   <link rel="stylesheet" href="style/main.css">
-  <title>Главная</title>
+  <title>О компании</title>
 </head>
 
 <body class="indent-reset site">
@@ -95,433 +95,27 @@
         </div>
       </div>
     </header>
-    <div class="site__content">
+    <div class="site__content site__content--bg-dark site__content--overflow-x">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <div class="container">
+          <a href="page-main.html">Главная</a>&ensp;&minus;&ensp;<span class="current-item">О компании</span>
+        </div>
+      </div>
       <main>
-        <section class="hero">
-          <div class="hero__content">
-            <div>
-              <div class="container">
-                <h1 class="hero__title">
-                  Производство и установка котлов на любом виде топлива
-                </h1>
-                <a href="#" class="btn btn--primary" data-hystmodal="#callback-modal">Подробнее</a>
-              </div>
-            </div>
-
-            <div class="hero__bottom">
-              <div class="container">
-                <ul class="list-reset hero__list">
-                  <li class="hero__item">
-                    <div class="hero__item-title">&lt; 10 лет</div>
-                    <p class="hero__item-descr">Оценочный срок службы котлов</p>
-                  </li>
-                  <li class="hero__item">
-                    <div class="hero__item-title">3 года</div>
-                    <p class="hero__item-descr">Гарантии на корпус котла от поломок и протечек</p>
-                  </li>
-                  <li class="hero__item">
-                    <div class="hero__item-title">1 год</div>
-                    <p class="hero__item-descr">На автоматику и механизмы котлов</p>
-                  </li>
-
-                </ul>
-              </div>
+        <section class="page-about page page--bg-img">
+          <div class="container">
+            <div class="page__top page-about__top">
+              <h1 class="title page__title">О компании</h1>
+              <p class="page__descr">
+                Кировский котельный завод (современный бренд - «Вятские котлы») до 1996
+                года являлся структурной единицей кировского областного объединения ОАО
+                «Коммунэнерго»
+              </p>
             </div>
           </div>
         </section>
-        <section class="products ">
-          <div class="container">
-            <div class="site__section-top site__section-top--primary">
-              <div class="products__info">
-                <h2 class="title title--primary mr-lg-4">Продукция</h2>
-                <a class="btn btn--secondary" href="#">
-                  В каталог
-                  <svg width="17" height="17" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                  </svg>
-                </a>
-              </div>
 
-              <div class="slider-controls-btn d-none d-lg-inline-flex">
-                <!-- If we need navigation buttons -->
-                <div class="slider-btn-prev">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-prev"></use>
-                  </svg>
-                </div>
-                <div class="slider-btn-next">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-next"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slider main container -->
-            <div class="swiper products-slider">
-              <!-- Additional required wrapper -->
-
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide products__slide">
-                  <article class="product product--small">
-                    <div class="product__top">
-                      <span class="product__power">200 - 10&nbsp;000 кВт</span>
-                      <div class="product__img">
-                        <img src="img/products/img-product-1.png" alt="Product">
-                        <button class="product__btn">
-                          <svg width="23" height="23" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mr-2">
-                      <h3 class="product__title">
-                        <a href="#">Водогрейные котлы на щепе, опилках, коре, торфе и других отходах</a>
-                      </h3>
-                      <table class="product__feature d-lg-block">
-                        <tbody>
-                          <tr>
-                            <td class="product__feature-label">Мощность, кВт</td>
-                            <td class="product__feature-value">200 - 10 000</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Теплопроизводительность, Гкал/час</td>
-                            <td class="product__feature-value">200 - 10 000 кВт</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Вид топлива</td>
-                            <td class="product__feature-value">опил, щепа и т.п., кора, торф, зерно, агроотходы</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </article>
-                </div>
-                <div class="swiper-slide products__slide">
-                  <article class="product product--small">
-                    <div class="product__top">
-                      <span class="product__power">200 - 10&nbsp;000 кВт</span>
-                      <div class="product__img">
-                        <img src="img/products/img-product-2.png" alt="Product">
-                        <button class="product__btn">
-                          <svg width="23" height="23" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mr-2">
-                      <h3 class="product__title">
-                        <a href="#">Водогрейные котлы на щепе, опилках, коре, торфе и других отходах</a>
-                      </h3>
-                      <table class="product__feature d-lg-block">
-                        <tbody>
-                          <tr>
-                            <td class="product__feature-label">Мощность, кВт</td>
-                            <td class="product__feature-value">200 - 10 000</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Теплопроизводительность, Гкал/час</td>
-                            <td class="product__feature-value">200 - 10 000 кВт</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Вид топлива</td>
-                            <td class="product__feature-value">опил, щепа и т.п., кора, торф, зерно, агроотходы</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </article>
-                </div>
-                <div class="swiper-slide products__slide">
-                  <article class="product product--small">
-                    <div class="product__top">
-                      <span class="product__power">200 - 10&nbsp;000 кВт</span>
-                      <div class="product__img">
-                        <img src="img/products/img-product-3.png" alt="Product">
-                        <button class="product__btn">
-                          <svg width="23" height="23" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mr-2">
-                      <h3 class="product__title">
-                        <a href="#"> Водогрейные котлы на щепе, опилках, коре, торфе и других отходах</a>
-                      </h3>
-                      <table class="product__feature d-lg-block">
-                        <tbody>
-                          <tr>
-                            <td class="product__feature-label">Мощность, кВт</td>
-                            <td class="product__feature-value">200 - 10 000</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Теплопроизводительность, Гкал/час</td>
-                            <td class="product__feature-value">200 - 10 000 кВт</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Вид топлива</td>
-                            <td class="product__feature-value">опил, щепа и т.п., кора, торф, зерно, агроотходы</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </article>
-                </div>
-                <div class="swiper-slide products__slide">
-                  <article class="product product--small">
-                    <div class="product__top">
-                      <span class="product__power">200 - 10&nbsp;000 кВт</span>
-                      <div class="product__img">
-                        <img src="img/products/img-product-3.png" alt="Product">
-                        <button class="product__btn">
-                          <svg width="23" height="23" aria-hidden="true">
-                            <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="mr-2">
-                      <h3 class="product__title">
-                        <a href="#">Водогрейные котлы на щепе, опилках, коре, торфе и других отходах</a>
-                      </h3>
-                      <table class="product__feature d-lg-block">
-                        <tbody>
-                          <tr>
-                            <td class="product__feature-label">Мощность, кВт</td>
-                            <td class="product__feature-value">200 - 10 000</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Теплопроизводительность, Гкал/час</td>
-                            <td class="product__feature-value">200 - 10 000 кВт</td>
-                          </tr>
-                          <tr>
-                            <td class="product__feature-label">Вид топлива</td>
-                            <td class="product__feature-value">опил, щепа и т.п., кора, торф, зерно, агроотходы</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </article>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-        <section class="services services--accordion">
-          <div class="container">
-            <div class="site__section-top site__section-top--secondary mb-5">
-              <h2 class="title title--primary mr-lg-4">Услуги</h2>
-              <a class="btn btn--secondary" href="#">
-                Все услуги
-                <svg width="17" height="17" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="accordion services-accordion">
-              <div class="accordion__item">
-                <button class="accordion__control services__subtitle">
-                  Монтаж
-                  <svg width="23" height="23" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                  </svg>
-                </button>
-                <div class="accordion__content">
-                  <article class="service">
-                    <h3 class="service__title">
-                      Монтаж котельных установок любой производительности на различных видах топлива
-                    </h3>
-                    <a class="service__btn" href="#">
-                      <svg width="23" height="23" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                      </svg>
-                    </a>
-                  </article>
-                  <article class="service">
-                    <h3 class="service__title">
-                      Проведение пуско-наладочных работ и режимно-наладочных испытаний на промышленных установках
-                    </h3>
-                    <a class="service__btn" href="#">
-                      <svg width="23" height="23" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                      </svg>
-                    </a>
-                  </article>
-                  <article class="service">
-                    <h3 class="service__title">
-                      Ремонт промышленного оборудования, паровых и водогрейных котлов
-                    </h3>
-                    <a class="service__btn" href="#">
-                      <svg width="23" height="23" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                      </svg>
-                    </a>
-                  </article>
-                  <article class="service">
-                    <h3 class="service__title">
-                      Ремонт промышленного оборудования, паровых и водогрейных котлов
-                    </h3>
-                    <a class="service__btn" href="#">
-                      <svg width="23" height="23" aria-hidden="true">
-                        <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                      </svg>
-                    </a>
-                  </article>
-                </div>
-              </div>
-              <div class="accordion__item">
-                <button class="accordion__control services__subtitle">
-                  Ремонт
-                  <svg width="23" height="23" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                  </svg>
-                </button>
-                <div class="accordion__content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eos illo amet saepe, nam molestiae
-                  exercitationem consequuntur doloribus commodi optio suscipit veritatis quo debitis architecto!
-                </div>
-              </div>
-              <div class="accordion__item">
-                <button class="accordion__control services__subtitle">
-                  Другие услуги
-                  <svg width="23" height="23" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                  </svg></button>
-                <div class="accordion__content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eos illo amet saepe, nam molestiae
-                  exercitationem consequuntur doloribus commodi optio suscipit veritatis quo debitis architecto!
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="fuel-type">
-          <div class="container">
-            <div class="fuel-type__top">
-              <h2 class="title title--primary fuel-type__title">
-                Тип вашего топлива
-              </h2>
-              <div class="slider-controls-btn slider-controls-btn--absolute d-none d-lg-inline-flex">
-                <!-- If we need navigation buttons -->
-                <div class="slider-btn-prev">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-prev"></use>
-                  </svg>
-                </div>
-                <div class="slider-btn-next">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-next"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="swiper fuel-type-slider">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="fuel-type__slide-img">
-                  <img src="img/img-fuel-type.png" alt="fuel type">
-                </div>
-                <div class="fuel-type__slide-text">Опилки</div>
-              </div>
-
-            </div>
-
-            <!-- If we need navigation buttons -->
-          </div>
-
-
-          <div class="container">
-            <div class="fuel-type__bottom">
-
-              <div class="fuel-type__descr">
-                <h3 class="title fuel-type__subtitle">
-                  Нет вашего типа?
-                </h3>
-                <div class="fuel-type__text">
-                  Оставьте заяву и мы подберём котёл по вашему запросу
-                </div>
-              </div>
-              <a class="fuel-type__btn" href="#">
-                <svg width="23" height="23" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="request request--large">
-          <div class="container">
-            <div class="request__inner">
-              <div class="request__content">
-                <div class="request__img">
-                  <img src="img/img-request.png" aria-hidden="true">
-                </div>
-                <div class="request__descr">
-                  <h2 class="request__title">
-                    Не знаете, какой котел вам нужен, <span>или хотите переделать имеющийся?</span>
-                  </h2>
-                  <p class="request__text">
-                    Позвоните нам или оставьте заявку - наши менеджеры проконсультируют вас
-                  </p>
-                  <button class="btn btn--primary">Оставить заявку</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="about ">
+        <section class="about bg-white">
           <div class="container">
             <div class="about__content">
               <div class="about__video video video--is-paused">
@@ -560,6 +154,29 @@
                     Подробнее о заводе
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="certificate bg-white">
+          <div class="container">
+            <div class="certificate__cont">
+              <div class="certificate__img">
+                <a href="">
+                  <img src="/img/img-certificate.png" alt="Сертификат">
+                </a>
+              </div>
+
+              <div class="certificate__info">
+                <h2 class="certificate__title">Сертификат</h2>
+                <ul class="certificate__list">
+                  <li>
+                    Удостоверение о повышении квалификации по курсу "Ресурсно-индексный метод составления сметной документации" установленного образца, сроком действия 5 лет.
+                  </li>
+                  <li>
+                    Данные выданного документа вносятся в единый реестр ФИС ФРДО
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -613,21 +230,6 @@
                   </p>
                 </li>
               </ul>
-            </div>
-          </div>
-        </section>
-        <section class="request request--small request--black">
-          <div class="container">
-            <div class="request__inner">
-              <div class="request__descr">
-                <h2 class="title request__title">
-                  Остались вопросы
-                </h2>
-                <p class="request__text">
-                  Заполните заявку
-                </p>
-              </div>
-              <button class="btn btn--primary">Оставить заявку</button>
             </div>
           </div>
         </section>
@@ -746,157 +348,7 @@
             </div>
           </div>
         </section>
-        <section class="projects">
-          <div class="container">
-            <div class="site__section-top site__section-top--secondary flex-column flex-lg-row align-items-start mb-5">
-              <h2 class="title title--secondary projects__title mr-lg-4">Реализованные проекты</h2>
-              <a class="btn btn--secondary" href="#">
-                Посмотреть всё
-                <svg width="17" height="17" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="custom-cont">
-            <div class="swiper projects-slider">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-
-                <div class="swiper-slide">
-                  <article class="project">
-                    <div class="project__img">
-                      <img src="img/img-project.png" alt="Project">
-                    </div>
-                    <div class="project__info">
-                      <div class="project__date">06.08.2023</div>
-                      <div class="project__descr">
-                        <h3 class="title project__title">
-                          АО Салаватский катализаторный завод
-                        </h3>
-                        <p>Монтаж технологического оборудования</p>
-                      </div>
-                      <a class="btn btn--secondary project__btn" href="#">
-                        <svg width="23" height="23" aria-hidden="true">
-                          <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="swiper-slide">
-                  <article class="project">
-                    <div class="project__img">
-                      <img src="img/img-project.png" alt="Project">
-                    </div>
-                    <div class="project__info">
-                      <div class="project__date">06.08.2023</div>
-                      <div class="project__descr">
-                        <h3 class="title project__title">
-                          АО Салаватский катализаторный завод
-                        </h3>
-                        <p>Монтаж технологического оборудования</p>
-                      </div>
-                      <a class="btn btn--secondary project__btn" href="#">
-                        <svg width="23" height="23" aria-hidden="true">
-                          <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="swiper-slide">
-                  <article class="project">
-                    <div class="project__img">
-                      <img src="img/img-project.png" alt="Project">
-                    </div>
-                    <div class="project__info">
-                      <div class="project__date">06.08.2023</div>
-                      <div class="project__descr">
-                        <h3 class="title project__title">
-                          АО Салаватский катализаторный завод
-                        </h3>
-                        <p>Монтаж технологического оборудования</p>
-                      </div>
-                      <a class="btn btn--secondary project__btn" href="#">
-                        <svg width="23" height="23" aria-hidden="true">
-                          <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="swiper-slide">
-                  <article class="project">
-                    <div class="project__img">
-                      <img src="img/img-project.png" alt="Project">
-                    </div>
-                    <div class="project__info">
-                      <div class="project__date">06.08.2023</div>
-                      <div class="project__descr">
-                        <h3 class="title project__title">
-                          АО Салаватский катализаторный завод
-                        </h3>
-                        <p>Монтаж технологического оборудования</p>
-                      </div>
-                      <a class="btn btn--secondary project__btn" href="#">
-                        <svg width="23" height="23" aria-hidden="true">
-                          <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="swiper-slide">
-                  <article class="project">
-                    <div class="project__img">
-                      <img src="img/img-project.png" alt="Project">
-                    </div>
-                    <div class="project__info">
-                      <div class="project__date">06.08.2023</div>
-                      <div class="project__descr">
-                        <h3 class="title project__title">
-                          АО Салаватский катализаторный завод
-                        </h3>
-                        <p>Монтаж технологического оборудования</p>
-                      </div>
-                      <a class="btn btn--secondary project__btn" href="#">
-                        <svg width="23" height="23" aria-hidden="true">
-                          <use xlink:href="img/sprite.svg#icon-btn-arrow"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-
-
-              </div>
-
-
-              <!-- If we need navigation buttons -->
-              <div class="slider-controls-btn d-none d-lg-inline-flex">
-                <!-- If we need navigation buttons -->
-                <div class="slider-btn-prev">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-prev"></use>
-                  </svg>
-                </div>
-                <div class="slider-btn-next">
-                  <svg width="31" height="20" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#icon-btn-slider-next"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="articles ">
+        <section class="articles bg-white">
           <div class="container">
             <div class="site__section-top site__section-top--secondary flex-lg-row align-items-center align-items-xl-start mb-5">
               <h2 class="title title--secondary articles__title mr-lg-4">Статьи</h2>
@@ -987,6 +439,21 @@
                 </article>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="request request--small request--black">
+          <div class="container">
+            <div class="request__inner">
+              <div class="request__descr">
+                <h2 class="title request__title">
+                  Остались вопросы
+                </h2>
+                <p class="request__text">
+                  Заполните заявку
+                </p>
+              </div>
+              <button class="btn btn--primary">Оставить заявку</button>
+            </div>
           </div>
         </section>
       </main>

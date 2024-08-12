@@ -14,7 +14,7 @@
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style/vendor-bundle.css">
   <link rel="stylesheet" href="style/main.css">
-  <title>Страница</title>
+  <title>Контакты</title>
 </head>
 
 <body class="indent-reset site">
@@ -95,14 +95,49 @@
         </div>
       </div>
     </header>
-    <div class="site__content">
+    <div class="site__content site__content--bg-dark">
       <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
         <div class="container">
-          <a href="page-main.html">Главная</a>&ensp;&minus;&ensp;<span class="current-item">Пример тестовой страницы</span>
+          <a href="page-main.html">Главная</a>&ensp;&minus;&ensp;<span class="current-item">Контакты</span>
         </div>
       </div>
       <main>
+        <section class="page-contacts page">
 
+          <div class="container">
+            <h1 class="title page__title">Контакты</h1>
+          </div>
+
+
+          <div class="bg-white">
+            <div class="page-contacts__cont">
+              <div class="page-contacts__info">
+                <div class="page-contacts__address">
+                  Россия, г. Нижний Новгород, пр-т Ленина 91
+                </div>
+
+                <ul class="list-reset page-contacts__list">
+                  <li class="contact contact--phone">
+                    <div class="contact__title">Телефон</div>
+                    <div class="contact__value">
+                      <a href="tel:84924859230">8 (49248) 5-92-30</a>
+                    </div>
+                  </li>
+                  <li class="contact contact--mail">
+                    <div class="contact__title">E-mail</div>
+                    <div class="contact__value">
+                      <a href="mailto:info@automaticles.ru">info@automaticles.ru</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-contacts__map">
+                <img src="/img/img-map.png">
+              </div>
+            </div>
+          </div>
+
+        </section>
       </main>
     </div>
     <footer class="site__footer footer">
