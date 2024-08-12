@@ -237,7 +237,7 @@
                     </div>
                   </div>
 
-                  <button class="btn btn--primary page-product__btn">Оставить заявку</button>
+                  <button class="btn btn--primary page-product__btn" data-hystmodal="#order-modal">Оставить заявку</button>
                 </div>
               </div>
 
@@ -439,7 +439,7 @@
                   Оставьте заявку на&nbsp;обратный звонок или позвоните по&nbsp;телефону 8&nbsp;800&nbsp;000 00&nbsp;00
                 </p>
               </div>
-              <button class="btn btn--primary">Оставить заявку</button>
+              <button class="btn btn--primary" data-hystmodal="#callback-modal">Оставить заявку</button>
             </div>
           </div>
         </section>
@@ -528,6 +528,10 @@
                     <input id="phone" class="form-input" type="tel" required="" placeholder="8 800 000 00 00" data-validate="phone" data-mask="+7 (___) ___ __ __">
                   </div>
                 </div>
+                <div>
+                  <label class="form-label" for="comment">Имя</label>
+                  <textarea id="comment" class="form-input form-textarea" type="text"></textarea>
+                </div>
               </div>
               <div class="modal__bottom">
                 <div>
@@ -603,7 +607,7 @@
               </svg>
             </button>
             <div class="modal__title">
-              Заказать звонок
+              Заказать “Котёл водогрейные серии КВ-Га мощность от 0,5 до 2,0 мВт”
             </div>
             <form id="order-form-modal" class="form-modal" data-validate>
 
@@ -617,6 +621,55 @@
                     <label class="form-label" for="phone">Телефон</label>
                     <input id="phone" class="form-input" type="tel" required="" placeholder="8 800 000 00 00" data-validate="phone" data-mask="+7 (___) ___ __ __">
                   </div>
+                </div>
+              </div>
+              <div class="modal__bottom">
+                <div>
+                  <label class="form-checkbox">
+                    <input class="visually-hidden" type="checkbox" required="" data-validate="confirm">
+                    <span>
+                      <span>
+                        Я согласен(на) с <a href="#" target="_blank" rel="nofollow noreferer noopener"> Политикой Конфиденциальности </a> и <a href="#" target="_blank" rel="nofollow noreferer noopener"> Соглашением об обработке персональных данных </a>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+                <button class="btn btn--primary" type="submit">Отправить</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="review-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="32" height="32" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="modal__title">
+              Оставить отзыв
+            </div>
+            <form id="ask-question-form-modal" class="form-modal" data-validate>
+
+              <div class="modal__top">
+                <div class="modal__field">
+                  <div>
+                    <label class="form-label" for="name">Имя</label>
+                    <input id="name" class="form-input" type="text" data-validate="name" required="">
+                  </div>
+                  <div>
+                    <label class="form-label" for="phone">Телефон</label>
+                    <input id="phone" class="form-input" type="tel" required="" placeholder="8 800 000 00 00" data-validate="phone" data-mask="+7 (___) ___ __ __">
+                  </div>
+                </div>
+                <div>
+                  <label class="form-label" for="comment">Имя</label>
+                  <textarea id="comment" class="form-input form-textarea" type="text"></textarea>
                 </div>
               </div>
               <div class="modal__bottom">

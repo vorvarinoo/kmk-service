@@ -10,6 +10,7 @@ export const initModalCategories = () => {
   const modalTriggerNode = document.querySelector( '#categories' );
 
   const modalCloseNode = document.querySelector( '.categories-modal__close' );
+  const listLinkCategories = document.querySelectorAll( '.categories-modal .categories__item a' );
 
   if ( !modalNode || !modalTriggerNode ) return;
 
@@ -31,6 +32,13 @@ export const initModalCategories = () => {
     modalNode.setAttribute( 'aria-hidden', 'true' );
     document.removeEventListener( 'keydown', onEscKeydown );
   }
+
+  listLinkCategories.forEach( ( elem ) => {
+    elem.addEventListener( 'click', () => {
+
+      setTimeout( closeModal, 200 );
+    } );
+  } );
 
   breakpointChecker( () => {
     closeModal();
