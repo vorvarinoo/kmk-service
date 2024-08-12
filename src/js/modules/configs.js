@@ -99,6 +99,35 @@ const sliderConfig = {
       },
     },
   },
+  projectSlider: {
+    loop: true,
+    navigation: {
+      nextEl: '.project-slider .slider-btn-next',
+      prevEl: '.project-slider .slider-btn-prev',
+    },
+    breakpoints: {
+      320: {
+        spaceBetween: 30,
+        slidesPerView: 1.4,
+        centeredSlides: true,
+        freeMode: true,
+      },
+      992: {
+        spaceBetween: 0,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+          scale: 0.8,
+        },
+      },
+    },
+  },
 };
 
 const smoothScrollConfig = {

@@ -1,18 +1,5 @@
 .page-service {
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 50.0%), linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%), url('../img/img-bg-page-service.png');
-    background-repeat: no-repeat;
-    width: 945px;
-    height: 600px;
-    z-index: -1;
-  }
-
-
   &__title {
     font-size: 30px;
     color: var(--black);
@@ -37,13 +24,6 @@
     }
   }
 
-  &__img {
-    display: flex;
-    max-width: 730px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 50px;
-  }
 
   &__btn {
     width: 100%;

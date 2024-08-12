@@ -16,15 +16,13 @@
 
 }
 
-
-
 .project {
   position: relative;
 
   &__img {
     position: relative;
     z-index: 1;
-    padding-top: 45%;
+    padding-top: 54%;
     border-left: 1px solid var(--black);
     border-right: 1px solid var(--black);
     border-top: 1px solid var(--black);
@@ -40,7 +38,6 @@
   }
 
   &__info {
-
     background-color: var(--black);
     display: grid;
 

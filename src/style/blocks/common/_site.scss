@@ -12,12 +12,35 @@
   &__content {
     flex-grow: 1;
     position: relative;
-    overflow: hidden;
     // margin-top: var(--offset-top, 0);
 
     &--bg-dark {
       background-color: var(--black);
+
+      & .breadcrumbs {
+        --breadcrumbs-text: var(--gray-50);
+      }
+
+      & .page__title {
+        color: var(--white);
+      }
+
+      & .page--bg-img {
+        &::after {
+          background: linear-gradient(0, #231f1e 0%, rgba(35, 31, 30, 0) 50.08%), linear-gradient(90deg, #231f1e 0%, rgba(35, 31, 30, 0) 100%), var(--background-img);
+        }
+      }
+
+      & .page__text {
+        color: var(--white);
+      }
+
     }
+
+    &--overflow-x {
+      overflow: hidden;
+    }
+
   }
 
   &__footer {

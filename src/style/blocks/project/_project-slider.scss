@@ -1,1 +1,34 @@
-.project-slider {}
+.project-slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  & .swiper-slide {
+    max-width: 920px !important;
+    transition: opacity .5s ease-in-out;
+    position: relative;
+
+    @include media-min ($lg) {
+      opacity: 0.2;
+    }
+
+  }
+
+  & .swiper-slide-active {
+    opacity: 1;
+  }
+
+  & .slider-controls-btn {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1110px;
+    padding: 0 15px;
+  }
+}

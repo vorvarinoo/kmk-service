@@ -1,4 +1,28 @@
 .page {
+
+  &--bg-img {
+    @include media-min ($lg) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background: linear-gradient(0deg, #fff 0%, rgba(255, 255, 255, 0) 50.0%),
+          linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%),
+          var(--background-img);
+        background-repeat: no-repeat;
+        width: 945px;
+        height: var(--background-height, 600px);
+      }
+    }
+
+  }
+
+  & > section {
+    position: relative;
+    z-index: 1;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -11,10 +35,8 @@
   }
 
   &__title {
-    margin: 0;
     font-size: 35px;
-    line-height: 1.1;
-    color: var(--white);
+    color: var(--black);
     flex-basis: 100%;
     width: 100%;
     margin-bottom: 20px;
@@ -27,30 +49,52 @@
     &--small {
       font-size: 30px;
 
+
       @include media-min ($lg) {
         font-size: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &--news {
+      font-size: 30px;
+
+      @include media-min ($lg) {
+        margin-bottom: 50px;
       }
     }
   }
+
+
 
   &__descr {
     margin: 0;
     color: var(--gray-50);
     flex-basis: 90%;
     width: 90%;
+    margin-bottom: 50px;
+
   }
 
   &__text {
     font-size: 16px;
-    color: var(--belyy);
+    color: var(--gray-50);
     display: grid;
     row-gap: 15px;
-    font-weight: 400;
     margin-bottom: 50px;
+    max-width: 540px;
 
     & p {
       margin: 0;
     }
+  }
+
+  &__img {
+    display: flex;
+    max-width: 730px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 50px;
   }
 
   &__nav {

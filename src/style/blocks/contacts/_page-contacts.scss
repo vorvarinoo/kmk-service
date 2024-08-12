@@ -1,0 +1,113 @@
+.page-contacts {
+  --width-cont: 510px;
+
+  @include media-min ($md) {
+    --width-cont: 690px;
+  }
+
+  @include media-min ($lg) {
+    --width-cont: 930px;
+  }
+
+  @include media-min ($xl) {
+    --width-cont: 1110px;
+  }
+
+  &__cont {
+
+    @include media-min ($lg) {
+      width: 100%;
+      padding-left: max(15px, calc((100% - var(--width-cont)) / 2));
+      padding-right: 0;
+      display: flex;
+      align-items: start;
+    }
+
+  }
+
+  &__info {
+    margin-top: 50px;
+    width: min(var(--width-cont), 100% - 30px);
+    margin: 0 auto;
+    background: var(--gray-10);
+    max-width: 540px;
+
+    margin-bottom: 50px;
+
+    @include media-min ($lg) {
+      margin-top: 100px;
+      width: 100%;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+
+  &__address {
+    padding: 15px 15px 0;
+    font-size: 18px;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 20px;
+
+    @include media-min ($lg) {
+      padding: 20px 20px 0;
+    }
+  }
+
+  &__list {
+    padding: 0 15px 20px;
+    display: grid;
+    gap: 40px;
+
+    @include media-min ($lg) {
+      border-top: 1px solid var(--gray-20);
+      padding: 10px 20px 20px;
+      column-gap: 80px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & li {
+      position: relative;
+
+      @include media-max ($lg) {
+        &::before {
+          position: absolute;
+          content: '';
+          top: -15px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          border-top: 1px solid var(--gray-20);
+        }
+      }
+
+      @include media-min ($lg) {
+        &::before {
+          position: absolute;
+          content: '';
+          top: 0px;
+          left: -40px;
+          width: 1px;
+          height: 100%;
+          border-left: 1px solid var(--gray-20);
+        }
+      }
+
+      &:first-child,
+      &:nth-child(odd) {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__map {
+    max-width: 945px;
+
+    @include media-min ($lg) {
+      width: calc(100% - 540px - 30px);
+    }
+  }
+
+}

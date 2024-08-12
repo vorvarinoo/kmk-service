@@ -32,6 +32,10 @@ import {
   initModalCategories
 } from './modules/products.js';
 
+import {
+  initVideo
+} from './modules/video.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
 
@@ -43,5 +47,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initYTubeVideo();
     initHeaderMenu();
     initModalCategories();
+    initVideo();
   } );
 } );

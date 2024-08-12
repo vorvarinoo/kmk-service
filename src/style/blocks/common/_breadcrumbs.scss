@@ -1,9 +1,12 @@
 .breadcrumbs {
-  --breadcrumbs-text: var(--gray-50);
+  --breadcrumbs-text: var(--gray-30);
+
   color: var(--breadcrumbs-text, var(--main-text));
   background-color: transparent;
   margin-top: 100px;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 
   & a {
     color: inherit;

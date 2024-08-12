@@ -1,0 +1,19 @@
+<section class="page-about page page--bg-img">
+  <div class="container">
+    <div class="page__top page-about__top">
+      <h1 class="title page__title">О компании</h1>
+      <p class="page__descr">
+        Кировский котельный завод (современный бренд - «Вятские котлы») до 1996
+        года являлся структурной единицей кировского областного объединения ОАО
+        «Коммунэнерго»
+      </p>
+    </div>
+  </div>
+</section>
+
+@include('../main/about.html', {class: 'bg-white'})
+@include('certificate.html', {class: 'bg-white'})
+@include('../main/benefits.html')
+@include('../main/reviews.html')
+@include('../main/articles.html', {class: 'bg-white'})
+@include('../main/request-two.html', {class: 'request--black', text:'Заполните заявку'})

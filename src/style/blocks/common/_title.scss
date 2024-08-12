@@ -1,12 +1,6 @@
 .title {
   margin: 0;
-  line-height: 110%;
-  font-size: 35px;
-
-
-  @include media-min ($lg) {
-    font-size: 80px;
-  }
+  line-height: 1.1;
 
   &--primary {
     font-size: 30px;
@@ -26,7 +20,4 @@
     }
   }
 
-  &--page {
-    color: var(--gray-10);
-  }
 }
