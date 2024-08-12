@@ -7,7 +7,7 @@
     background-position: left start;
     padding-left: 50px;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
       padding-left: 0;
       padding-top: 60px;
     }

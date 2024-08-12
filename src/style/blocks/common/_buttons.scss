@@ -68,7 +68,7 @@
   align-items: center;
 
   background-color: var(--btn-arrow-bg);
-  color: var(--accent);
+  color: var(--white);
   width: 50px;
   height: 50px;
 
@@ -76,8 +76,18 @@
   bottom: 0;
   left: 0;
 
+  transition: background-color .3s ease-in-out, transform .3s ease-in-out;
+
+  @include media-min ($lg) {
+    color: var(--accent);
+  }
+
   &--light {
-    --btn-arrow-bg: var(--white);
+    --btn-arrow-bg: var(--accent);
+
+    @include media-min ($lg) {
+      --btn-arrow-bg: var(--white);
+    }
   }
 
   & svg {

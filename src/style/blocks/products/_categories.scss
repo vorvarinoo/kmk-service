@@ -37,6 +37,17 @@
     flex-direction: column;
     position: relative;
     padding: 20px 20px 0;
+    background-color: #000000;
+    transition: background-color .3s ease-in-out;
+
+    @include media-min ($lg) {
+      background-color: transparent;
+    }
+
+    & > img {
+      position: relative;
+      z-index: 1;
+    }
 
     &:nth-child(n+2) {
       &::after {
@@ -67,6 +78,42 @@
       }
     }
 
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url('../img/sprite.svg#icon-dot-white');
+      background-size: 20px;
+      background-repeat: repeat;
+      opacity: .15;
+
+      @include media-min ($lg) {
+        content: none;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #000000;
+
+        &::before {
+          content: '';
+        }
+
+        & .categories__subtitle a {
+          color: var(--accent);
+        }
+
+        & .btn-arrow {
+          color: var(--white);
+          background-color: var(--accent);
+        }
+      }
+    }
+
   }
 
   &__subtitle {
@@ -75,16 +122,22 @@
     & a {
       font-size: 18px;
       line-height: 1.1;
-      color: var(--black);
+      color: var(--accent);
+      transition: color .3s ease-in-out;
+
+      @include media-min ($lg) {
+        color: var(--black);
+      }
 
       &::after {
         position: absolute;
+        z-index: 1;
         content: '';
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 1;
+        z-index: 2;
       }
     }
   }

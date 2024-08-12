@@ -142,7 +142,8 @@
             </div>
           </div>
 
-          <button class="btn btn--primary page-product__btn">Оставить заявку</button>
+          <button class="btn btn--primary page-product__btn"
+                  data-hystmodal="#order-modal">Оставить заявку</button>
         </div>
       </div>
 
@@ -151,4 +152,4 @@
 </section>
 
 @include('../main/products.html', {class:'products--page-product', title: 'другое оборудование'})
-@include('../main/request-two.html', {text:'Оставьте заявку на&nbsp;обратный звонок или позвоните по&nbsp;телефону 8&nbsp;800&nbsp;000 00&nbsp;00'})
+@include('../main/request-two.html', {text:'Оставьте заявку на&nbsp;обратный звонок или позвоните по&nbsp;телефону 8&nbsp;800&nbsp;000 00&nbsp;00', link:'callback-modal'})

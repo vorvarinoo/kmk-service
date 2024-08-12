@@ -14,8 +14,10 @@
   }
 
   &__cont {
+    padding-top: 50px;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
+      padding-top: 0;
       width: 100%;
       padding-left: max(15px, calc((100% - var(--width-cont)) / 2));
       padding-right: 0;
@@ -26,15 +28,13 @@
   }
 
   &__info {
-    margin-top: 50px;
     width: min(var(--width-cont), 100% - 30px);
     margin: 0 auto;
     background: var(--gray-10);
     max-width: 540px;
-
     margin-bottom: 50px;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
       margin-top: 100px;
       width: 100%;
       margin-bottom: 0;
@@ -49,7 +49,7 @@
     color: var(--black);
     margin-bottom: 20px;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
       padding: 20px 20px 0;
     }
   }
@@ -59,7 +59,7 @@
     display: grid;
     gap: 40px;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
       border-top: 1px solid var(--gray-20);
       padding: 10px 20px 20px;
       column-gap: 80px;
@@ -69,7 +69,7 @@
     & li {
       position: relative;
 
-      @include media-max ($lg) {
+      @include media-max ($xl) {
         &::before {
           position: absolute;
           content: '';
@@ -81,7 +81,7 @@
         }
       }
 
-      @include media-min ($lg) {
+      @include media-min ($xl) {
         &::before {
           position: absolute;
           content: '';
@@ -104,8 +104,10 @@
 
   &__map {
     max-width: 945px;
+    margin: 0 auto;
 
-    @include media-min ($lg) {
+    @include media-min ($xl) {
+      margin: 0;
       width: calc(100% - 540px - 30px);
     }
   }

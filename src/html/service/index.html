@@ -16,7 +16,8 @@
              alt="Монтаж котельных установок любой производительности на различных видах топлива">
       </div>
 
-      <button class="btn btn--primary page-service__btn">Оставить заявку</button>
+      <button class="btn btn--primary page-service__btn"
+              data-hystmodal="#callback-modal">Оставить заявку</button>
 
       <div class="page__nav">
         <a class="page__item page__item--prev"
@@ -40,6 +41,6 @@
       </div>
     </div>
     @include('../main/projects.html')
-    @include('../main/request-two.html', {text:'Заполните заявку'})
+    @include('../main/request-two.html', {text:'Заполните заявку', link:'ask-question-modal'})
   </section>
 </div>

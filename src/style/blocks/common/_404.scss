@@ -1,0 +1,57 @@
+.page-404 {
+  margin: 70px 0 30px;
+
+  @include media-min ($lg) {
+    margin: 100px 0 50px;
+  }
+
+  &__cont {
+    display: grid;
+    text-align: center;
+  }
+
+  &__error {
+    font-size: 140px;
+    color: var(--accent);
+
+    @include media-min ($lg) {
+      font-size: 210px;
+    }
+  }
+
+  &__title {
+    color: var(--accent);
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    @include media-min ($lg) {
+      font-size: 36px;
+    }
+  }
+
+  &__descr {
+    color: var(--black);
+    margin-bottom: 30px;
+  }
+
+  & .btn {
+    margin-bottom: 15px;
+    justify-self: center;
+  }
+
+  &__link {
+    color: var(--accent);
+    border-bottom: 1px solid currentColor;
+    transition: color .3s ease-in-out, border-color .3s ease-in-out;
+
+    @include media-min ($lg) {
+      color: var(--black);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

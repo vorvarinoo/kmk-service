@@ -39,7 +39,6 @@
     color: var(--black);
     flex-basis: 100%;
     width: 100%;
-    margin-bottom: 20px;
 
     @include media-min ($lg) {
       font-size: 80px;
@@ -52,16 +51,11 @@
 
       @include media-min ($lg) {
         font-size: 50px;
-        margin-bottom: 50px;
       }
     }
 
     &--news {
       font-size: 30px;
-
-      @include media-min ($lg) {
-        margin-bottom: 50px;
-      }
     }
   }
 
@@ -73,7 +67,6 @@
     flex-basis: 90%;
     width: 90%;
     margin-bottom: 50px;
-
   }
 
   &__text {
@@ -81,8 +74,13 @@
     color: var(--gray-50);
     display: grid;
     row-gap: 15px;
+    margin-top: 20px;
     margin-bottom: 50px;
     max-width: 540px;
+
+    @include media-min ($lg) {
+      margin-top: 50px;
+    }
 
     & p {
       margin: 0;
