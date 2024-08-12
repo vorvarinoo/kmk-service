@@ -1318,12 +1318,46 @@ strong {
   color: var(--white);
 }
 
+.video {
+  position: relative;
+
+  height: 300px;
+
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .video {
+    position: relative;
+    bottom: -80px;
+
+    height: 550px;
+  }
+}
+@media (any-hover: hover) {
+  .video:hover.video--is-paused::after {
+    background-position: 70% center;
+    background-size: 50px 50px;
+  }
+}
 .video video {
   width: 100%;
 
   cursor: pointer;
 }
-.video::after {
+.video--is-paused::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  -o-border-image: fill 0 linear-gradient(var(--background), var(--background));
+     border-image: fill 0 linear-gradient(var(--background), var(--background));
+
+  --background: rgba(255, 255, 255, 0.8);
+}
+.video--is-paused::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1332,13 +1366,84 @@ strong {
   width: 80px;
   height: 80px;
 
-  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_b_67_3188)'%3E%3Ccircle cx='40' cy='40' r='40' fill='white'/%3E%3C/g%3E%3Cpath d='M52 38.768C53.3333 39.5378 53.3333 41.4623 52 42.2321L36.25 51.3253C34.9167 52.0951 33.25 51.1329 33.25 49.5933L33.25 31.4067C33.25 29.8671 34.9167 28.9049 36.25 29.6747L52 38.768Z' fill='url(%23paint0_linear_67_3188)'/%3E%3Cdefs%3E%3Cfilter id='filter0_b_67_3188' x='-60' y='-60' width='200' height='200' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='30'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_67_3188'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_67_3188' result='shape'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_67_3188' x1='26' y1='26' x2='55' y2='55' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F63853'/%3E%3Cstop offset='1' stop-color='%23FCC049'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-color: var(--accent);
+  background-image: url("data:image/svg+xml,%3Csvg width='38' height='44' viewBox='0 0 38 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37.6294 22L0.129392 43.6506L0.129394 0.349364L37.6294 22Z' fill='white' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 65% center;
+  background-size: 40px 40px;
+  border-radius: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 
+  transition: background-size 0.4s ease-in-out, background-image 0.3s ease-in-out, background-position 0.3s ease-in-out;
+
   pointer-events: none;
+}
+@media (min-width: 992px) {
+  .video--is-paused::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='36' viewBox='0 0 31 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.3047 18L0.304686 35.3205L0.304687 0.67949L30.3047 18Z' fill='rgba(255, 255, 255, 0.5)' /%3E%3C/svg%3E");
+  }
+}
+
+.page-404 {
+  margin: 70px 0 30px;
+}
+@media (min-width: 992px) {
+  .page-404 {
+    margin: 100px 0 50px;
+  }
+}
+.page-404__cont {
+  display: grid;
+
+  text-align: center;
+}
+.page-404__error {
+  font-size: 140px;
+  color: var(--accent);
+}
+@media (min-width: 992px) {
+  .page-404__error {
+    font-size: 210px;
+  }
+}
+.page-404__title {
+  margin-bottom: 30px;
+
+  font-size: 28px;
+  color: var(--accent);
+}
+@media (min-width: 992px) {
+  .page-404__title {
+    font-size: 36px;
+  }
+}
+.page-404__descr {
+  margin-bottom: 30px;
+
+  color: var(--black);
+}
+.page-404 .btn {
+  margin-bottom: 15px;
+
+  justify-self: center;
+}
+.page-404__link {
+  color: var(--accent);
+
+  border-bottom: 1px solid currentColor;
+
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+@media (min-width: 992px) {
+  .page-404__link {
+    color: var(--black);
+  }
+}
+@media (any-hover: hover) {
+  .page-404__link:hover {
+    color: var(--accent);
+  }
 }
 
 .just-burger {
