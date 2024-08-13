@@ -1235,6 +1235,10 @@ strong {
   align-items: flex-end;
   overflow: hidden;
 
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: auto;
 }
 .slider-controls-btn--absolute {
