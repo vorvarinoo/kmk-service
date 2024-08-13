@@ -24,9 +24,6 @@ import {
 
 import './modules/accordion.js';
 
-import {
-  initYTubeVideo
-} from './modules/yt-video.js';
 
 import {
   initModalCategories
@@ -44,7 +41,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initModals();
     initSliders();
     initScrollTop();
-    initYTubeVideo();
     initHeaderMenu();
     initModalCategories();
     initVideo();
