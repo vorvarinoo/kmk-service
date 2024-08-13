@@ -631,6 +631,7 @@ strong {
 
 .btn-arrow {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 50px;
@@ -641,7 +642,7 @@ strong {
   color: var(--accent);
 
   background-color: transparent;
-  background-color: var(--black);
+  background-color: var(--white);
   border: none;
   cursor: pointer;
 
@@ -651,21 +652,21 @@ strong {
 
   -webkit-tap-highlight-color: transparent;
 }
-@media (any-hover: none) {
+@media (min-width: 992px) {
   .btn-arrow {
-    background-color: var(--white);
+    background-color: var(--black);
   }
 }
 .btn-arrow--light {
-  color: var(--accent);
+  color: var(--white);
 
-  background-color: var(--white);
+  background-color: var(--accent);
 }
-@media (any-hover: none) {
+@media (min-width: 992px) {
   .btn-arrow--light {
-    color: var(--white);
+    color: var(--accent);
 
-    background-color: var(--accent);
+    background-color: var(--white);
   }
 }
 .btn-arrow svg {
@@ -1754,7 +1755,8 @@ strong {
 }
 .footer #callback-form {
   display: grid;
-  margin-right: auto;
+  width: 100%;
+  max-width: 330px;
   margin-bottom: 30px;
 
   grid-auto-rows: -webkit-min-content;
@@ -1763,6 +1765,7 @@ strong {
 @media (min-width: 992px) {
   .footer #callback-form {
     max-width: 390px;
+    margin-right: auto;
     margin-bottom: 0;
   }
 }
@@ -2108,6 +2111,8 @@ strong {
   max-width: 250px;
   padding: 0 0 20px 10px;
 
+  background-color: #000000;
+
   transition: 0.3s;
 
   --border-tr: var(--gray-10);
@@ -2120,6 +2125,7 @@ strong {
   }
 }
 .product--small::after {
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -2131,12 +2137,9 @@ strong {
   background-size: 15px;
   opacity: 0.2;
 }
-@media (any-hover: none) {
-  .product--small {
-    background-color: #000000;
-  }
+@media (min-width: 992px) {
   .product--small::after {
-    content: "";
+    content: none;
   }
 }
 @media (any-hover: hover) {
