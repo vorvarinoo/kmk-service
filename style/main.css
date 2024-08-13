@@ -641,7 +641,7 @@ strong {
   color: var(--accent);
 
   background-color: transparent;
-  background-color: var(--white);
+  background-color: var(--black);
   border: none;
   cursor: pointer;
 
@@ -651,21 +651,21 @@ strong {
 
   -webkit-tap-highlight-color: transparent;
 }
-@media (min-width: 992px) {
+@media (any-hover: none) {
   .btn-arrow {
-    background-color: var(--black);
+    background-color: var(--white);
   }
 }
 .btn-arrow--light {
-  color: var(--white);
+  color: var(--accent);
 
-  background-color: var(--accent);
+  background-color: var(--white);
 }
-@media (min-width: 992px) {
+@media (any-hover: none) {
   .btn-arrow--light {
-    color: var(--accent);
+    color: var(--white);
 
-    background-color: var(--white);
+    background-color: var(--accent);
   }
 }
 .btn-arrow svg {
@@ -2108,8 +2108,6 @@ strong {
   max-width: 250px;
   padding: 0 0 20px 10px;
 
-  background-color: #000000;
-
   transition: 0.3s;
 
   --border-tr: var(--gray-10);
@@ -2122,7 +2120,6 @@ strong {
   }
 }
 .product--small::after {
-  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -2134,9 +2131,12 @@ strong {
   background-size: 15px;
   opacity: 0.2;
 }
-@media (min-width: 992px) {
+@media (any-hover: none) {
+  .product--small {
+    background-color: #000000;
+  }
   .product--small::after {
-    content: none;
+    content: "";
   }
 }
 @media (any-hover: hover) {
@@ -3729,6 +3729,13 @@ strong {
     color: var(--white);
 
     background-color: var(--accent);
+  }
+}
+@media (any-hover: none) {
+  .categories__item .btn-arrow {
+    color: var(--accent);
+
+    background-color: var(--white);
   }
 }
 .categories__subtitle {
