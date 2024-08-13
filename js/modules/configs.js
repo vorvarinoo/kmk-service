@@ -48,8 +48,8 @@ const sliderConfig = {
         },
       },
       1200: {
-        slidesPerView: 7,
-        spaceBetween: 50,
+        slidesPerView: 6,
+        spaceBetween: 60,
       },
     },
 
