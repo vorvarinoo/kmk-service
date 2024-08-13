@@ -2071,6 +2071,7 @@ strong {
   margin-bottom: 20px;
 }
 .product--large .product__img {
+  flex-shrink: 0;
   max-width: 150px;
   height: 150px;
 }
